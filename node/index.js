@@ -30,13 +30,13 @@ app.get("/", async (req, res) => {
   } catch (err) {
     console.error(
       "Ops! Tivemos um problema ao inserir um registro no banco de dados: ",
-      err,
+      err
     );
   }
 
   //const getNames = async () => {
   const [rows, fields] = await db.query(
-    `SELECT name FROM people ORDER BY ID DESC`,
+    `SELECT name FROM people ORDER BY ID DESC`
   );
   let strNames = "";
 

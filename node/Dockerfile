@@ -9,13 +9,11 @@ RUN apk update --no-cache \
 
 WORKDIR /usr/src/app
 
-COPY ./app/package*.json ./
+COPY ./package*.json ./
 
 RUN npm install
 
-RUN npm install -g nodemon
-
-COPY ./app/ .
+COPY . .
 
 EXPOSE 3000
 

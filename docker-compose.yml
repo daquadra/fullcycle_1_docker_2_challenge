@@ -27,13 +27,14 @@ services:
         "tcp://mariadb:3306",
         "-timeout",
         "30s",
-        "nodemon",
-        "index.js",
+        "npm",
+        "run",
+        "start",
       ]
     ports:
       - "3000:3000"
     volumes:
-      - ./node/app/:/usr/src/app
+      - ./node:/usr/src/app
     environment:
       - MYSQL_HOST=mariadb
       - MYSQL_USER=root
