@@ -12,7 +12,10 @@
   "dependencies": {
     "express": "^4.21.0",
     "index.js": "^0.0.3",
-    "mysql2": "^3.11.2"
+    "mysql2": "^3.11.2",
+    "npm": "^10.8.3",
+    "run": "^1.5.0",
+    "start": "^5.1.0"
   },
   "devDependencies": {
     "@faker-js/faker": "^9.0.0",
