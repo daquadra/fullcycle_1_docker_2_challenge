@@ -27,7 +27,9 @@ services:
         "tcp://mariadb:3306",
         "-timeout",
         "30s",
-        "docker-entrypoint.sh",
+        "npm",
+        "run",
+        "start",
       ]
     ports:
       - "3000:3000"
