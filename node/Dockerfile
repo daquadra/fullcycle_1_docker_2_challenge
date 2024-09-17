@@ -7,13 +7,13 @@ RUN apk update --no-cache \
   && wget -O - https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz | tar xzf - -C /usr/local/bin \
   && apk del wget
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
-COPY ./package*.json ./
+COPY app/package*.json ./
 
 RUN npm install
 
-COPY . .
+COPY /app ./
 
 EXPOSE 3000
 
